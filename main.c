@@ -62,9 +62,7 @@ void plot(int fd) {
 
 		for(int j=0; j<sn; j++) {
 			int v = cJSON_GetArrayItem(elem, j)->valueint;
-      if(v > 0) { // FIXME
-        point(i, j, v);
-      }
+      if(v > 0) point(i, j, 0x1); // (uint8_t)v
 		}
 	}
 
